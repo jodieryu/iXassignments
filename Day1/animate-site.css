@@ -72,6 +72,12 @@ body {
     background-color: #3e8e41;
 }
 
+option.head {
+selected:selected;
+display:none;
+disabled:disabled;
+}
+
 footer {
 	border-top: 1px solid black;
 	width: 960px;
