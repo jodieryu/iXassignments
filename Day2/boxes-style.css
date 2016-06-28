@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  transition: .5s all ease;
+
+}
+
+.bigBox {
+  background: none;
+  width: 100%;
+}
+
+.bigBox > div {
+  margin: 2%;
+  background: cornflowerblue;
+  padding: 5%;
+  display: inline-block;
+  width: 40%;
+  border: solid green 5px
+}
+
+div:nth-child(3) {
+  background: pink;
+}
+div:nth-child(4) {
+  background: white;
+}
+
+.circle {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background:red;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+}
+
