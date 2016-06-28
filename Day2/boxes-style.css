@@ -34,3 +34,7 @@ div:nth-child(4) {
   -webkit-border-radius: 50px;
 }
 
+/* Toggled State */
+input[type=checkbox]:checked + .bigBox > div {
+  display:block;
+}
