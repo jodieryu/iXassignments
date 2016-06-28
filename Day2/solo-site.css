@@ -1,0 +1,140 @@
+.container {
+	margin: 0px auto;
+	width: 880px;
+	text-align:center;
+}
+
+.splash {
+  background-color: #232732;
+  background-image: linear-gradient(45deg, #2c5499, #3e97e6);
+  overflow: visible;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  color: #fff;
+  font-size: 6.5em;
+  margin: 0 0 26px 0;
+  line-height: .9;
+  font-family: Arial;
+  text-align: center;
+}
+
+h2 {
+	color: #a9b5bf;
+	color: rgba(255, 255, 255, 0.75);
+	font-family:Century;
+	font-size:15px;
+}
+
+.buttons{
+	display:inline-block;
+	padding:55px 32px;
+	font-family:Tahoma;
+	text-transform: uppercase;
+	font-size: 10px;
+	margin: 4px 2px;
+
+}
+.button1 {
+	background-color:#e53935;
+	border-color: #e53935;
+  	background-color: #2dd98e;
+  	border-color: #2dd98e;
+  	border-radius: 50%;
+  	width:250px;
+  	height:10px;
+  	text-decoration: none;
+  	padding:15px;
+}
+.button1:hover {
+	background-color: #c03131;
+  	border-color: #c03131;
+  	background-color: #2bc37e;
+  	border-color: #2bc37e;
+}
+
+.button2 {
+	background-color: rgba(255, 255, 255, 0.2);
+  	border-color: rgba(255, 255, 255, 0.07);
+  	color: #fff;
+  	border-radius: 50%;
+  	width:20px;
+  	height:10px;
+  	text-decoration: none;
+  	padding:15px;
+}
+.button2:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+  	border-color: rgba(255, 255, 255, 0.4);
+  	color: #333;
+}
+
+.splash2 {
+	padding-top: 6.5em;
+	padding-bottom:6.5em;
+
+}
+
+h3 {
+	font-family: Arial;
+	font-size: 25px;
+}
+
+.description {
+	font-family:Century;
+	color:gray;
+	line-height: 30px;
+	text-align: center;
+	font-size:20px;
+}
+
+.row {
+	display: inline-block;
+	width:33%;
+	float:left;
+	list-style-type: none;
+}
+
+.screenshot2 {
+	display:inline-block;
+	padding-bottom: 30px;
+	background: #f4f4f4;
+}
+
+h5 {
+	font-family:Arial;
+	font-size: 25px;
+}
+em {
+	font-family: cursive;
+}
+.screenshot22 {
+	background: #f4f4f4;
+}
+.info {
+	background: #f4f4f4;
+}
+
+.minidescription {
+	font-family:Century;
+	color:gray;
+	line-height:30px;
+	text-align:center;
+	font-size:20px;
+}
+
+.Download {
+	background: #f9f8fa;
+}
+h4 {
+	font-family:Arial;
+	font-size: 20px;
+}
+span {
+	max-width: 600px;
+  	display: block;
+  	margin: 0 auto;
+}
+
+
