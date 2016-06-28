@@ -1,0 +1,30 @@
+body {
+	background: white;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.outside {
+	border-bottom: 1px solid;
+	margin: 0;
+	padding: 0px 72px;
+}
+
+#menu li {
+display: inline;
+margin: 10px;
+text-align: center;
+   }
+
+#list a {
+text-decoration: none;
+color: green;
+}
+
+#list {
+background-color: black;
+width:  300px;
+height: 25px;
+border-radius: 5px;
+}

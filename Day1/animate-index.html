@@ -4,6 +4,7 @@
 		<title>Animate</title>
 		<link type="text/css" rel="stylesheet" href="animate-site.css"/>
 	</head>
+
 		<div class="header">
 			<h1> Animate.css </h1>
 		</div>
@@ -13,29 +14,29 @@
 		</div>
 
 	<body>
-		<div class="dropdown">
-  			<button class="dropbtn">Dropdown</button>
-  			<div class="dropdown-content">
-    			<a href="#">bounce</a>
-    			<a href="#">flash</a>
-    			<a href="#">pulse</a>
-    			<a href="#">rubberBand</a>
-  			</div>
-		</div>
-
-		<select name='takeation'>
-<option class='head'>Select Action</option>
-<option value='Action 1'>Action 1</option>
-<option value='Action 2'>Action 2</option>
-<option value='Action 3'>Action 3</option>
-</select>
-
-		<footer>
-    		<ul>
-      			<li><a href="https://raw.github.com/daneden/animate.css/master/animate.css"></a>Download Animate.css</li>
-    			<li><a href="https://github.com/daneden/animate.css"></a>View on GitHub</li>
-    		</ul>
-  		</footer>	
+		<main class="site__content island" role="content">
+  			<div class="wrap">
+    			<form>
+      				<select class="dropdownMenu">
+        				<optgroup label="Attention Seekers">
+				          <option value="bounce">bounce</option>
+				          <option value="flash">flash</option>
+				          <option value="pulse">pulse</option>
+				          <option value="rubberBand">rubberBand</option>
+				          <option value="shake">shake</option>
+				          <option value="swing">swing</option>
+				          <option value="tada">tada</option>
+				          <option value="wobble">wobble</option>
+				          <option value="jello">jello</option>
+        				</optgroup>
+        			</select>
+					<button class="button">Animate it</button>
+				</form>
+		<hr />
+    	<p class="meta"><a href="https://raw.github.com/daneden/animate.css/master/animate.css" download="animate.css">Download Animate.css</a> or <a href="//github.com/daneden/animate.css">View on GitHub</a></p>
+   		<p><small>Another thing from <a href="//daneden.me">Daniel Eden</a>.</small></p>
+   			</div>
+   		</main>
 	</body>
 
 
