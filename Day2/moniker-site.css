@@ -1,13 +1,15 @@
 body {
 	background: black;
 	width: 100%;
-	margin: auto;
+	margin: 0px auto ;
 	padding: 0;
 }
-.darkness {
-	border-bottom: 1px solid;
-	margin: 0;
-	padding: 0px 72px;
+
+.container {
+	margin: 0px 0px;
+	width: 100%;
+	display: inline-block;
+	/* border:2px solid white; // to see how big your container is */
 }
 /*------header------*/
 #navbar {
@@ -15,10 +17,10 @@ body {
 }
 #navbar ul {
 	list-style-type: none;
-	margin: 0;
+	margin: 0px ;
 	padding: 0;
 	overflow: hidden;
-	font-family:Tahoma;
+	font-family:sans-serif;
 }
 #navbar li {
 	float:right;
@@ -26,8 +28,7 @@ body {
 #navbar li a {
 	display: block;
 	color: white;
-	text-align: center;
-	padding: 14px 16px;
+	padding: 14px 15px; /* provides spacing between words*/
 	text-decoration: none;
 }
 #navbar li a:hover:not(.active) {
@@ -37,43 +38,81 @@ body {
 	text-decoration: underline #4CAF50;
 }
 /*------row 2------*/
-.row-2 {
+.row-2 ul{
+	list-style-type: none; /* gets rid of bullet points*/
 	color:white;
+	text-decoration: none; 
+	font-family: sans-serif;
+}
+.row-2 li a {
+	display: inline-block;
+	color: white;
+	text-align: center;
 	text-decoration: none;
 }
-h1 {
-	float:left;
-	text-align:left;
-	font-size:20px;
-	font-family:Tahoma;
-}
-.socialmedia {
-	float:right;
-	color:white;
-}
-
-/*------row 3------*/
-div #one img {
-	padding-top: 25px;
-	padding-left: 15px;
+#description {
 	float: left;
-	width:500px;
-	height:500px;
+	width: 50%;
+	font-size:25px;
 }
-
-div#two img {
-	padding-top: 25px;
-	padding-left: 15px;
-	float: left;
-	width: 200px;
-	height: 200px;
-}
-
-div#three img {
-	padding-top: 25px;
-	padding-left: 15px;
-	padding-bottom: 25px;
+#contact-info {
 	float: right;
-	width: 430px;
-	height: 560px;
+	width: 20%;
+	font-size:15px;
 }
+#social-media {
+	float:right;
+	width:10%;
+	font-size:15px;
+}
+
+/*------row 3 and 5------*/
+.row-3-pictures ul li{
+	display:inline-block;
+	max-width: 100%;
+    height: auto;
+}
+.bigImage{ /* list element li ONLY */
+	float:left;
+	width:62%;
+	padding:10px;
+}
+.bigImage img{ /* accesses image within the list */
+	float:left;
+	width:100%;
+}
+.smallImage {
+	float:left;
+	width:30%;
+	padding:10px;
+}
+.smallImage img {
+	float:left;
+	width:100%;
+}
+.row-3-pictures ul li{
+	display:inline-block;
+	max-width: 100%;
+    height: auto;
+}
+/*-----row 4 and 6------*/
+.bigImageRight{ 
+	float:right;
+	width:62%;
+	padding:10px;
+	margin-right:55px;
+}
+.bigImageRight img{ 
+	float:right;
+	width:100%;
+}
+.smallImageRight {
+	float:right;
+	width:30%;
+	padding:10px;
+}
+.smallImageRight img {
+	float:right;
+	width:100%;
+}
+
