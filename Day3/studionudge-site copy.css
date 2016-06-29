@@ -1,6 +1,6 @@
 body {
 	background: white;
-	width: 100%;
+	max-width: 100%;
 	margin: 0;
 	padding: 0;
 }
@@ -13,7 +13,6 @@ body {
 .container {
 	margin:0px auto;
 	max-width:1000px;
-	border:1px solid red;
 }
 
 header {
@@ -72,7 +71,10 @@ div #work-heading p {
 	padding: 0 15%;
 	letter-spacing: 0.05em;
 	text-align: center;
+}
+span {
 	display: inline-block;
+	width:550px;
 }
 
 div #one img {
@@ -139,7 +141,35 @@ footer ul {
 	letter-spacing: 0.15em;
 	padding: 2px;
 }
-@media(max-width: 400px) {
 
+@media(max-width: 767px) {
+	div li img {
+		display: inline-block;
+	}
 }
+@media(max-width: 958px) {
+	div #work-heading p{
+		font-size:15px;
+	}
+}
+@media(max-width: 767px) {
+	div #work-heading p{
+		font-size:15px;
+		word-wrap:break-word;
+	}
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
 
