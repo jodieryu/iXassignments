@@ -6,13 +6,9 @@ body {
 }
 
 .outside {
-	margin: 0;
+	margin: 0px auto;
 	padding: 0px 72px;
-}
-
-.container {
-	margin:0px auto;
-	max-width:1000px;
+	max-width: 960px;
 }
 
 header {
@@ -147,17 +143,40 @@ footer ul {
 		display: inline-block;
 	}
 }
-@media(max-width: 958px) {
-	div #work-heading p{
+@media(max-width: 767px) {
+	div #work-heading p {
 		font-size:15px;
 	}
 }
 @media(max-width: 767px) {
-	div #work-heading p{
+	div #work-heading p {
 		font-size:15px;
-		word-wrap:break-word;
+		width:50%;
 	}
 }
+/*---snapping pics----*/
+@media(max-width: 960px) {
+	div #one img {
+	padding-top: 25px;
+	padding-left: 15px;
+	float: left;
+	width:800px;
+	height:490px;
+}
+@media(max-width: 940px) {
+	div #one img {
+	padding-top: 25px;
+	padding-left: 15px;
+	float: left;
+	width:700px;
+	height:390px;
+}
+
+/*@media(max-width: 767px) {
+	.outside {
+		max-width:600px;
+	}
+}*/
 
 .clearfix:after {
      visibility: hidden;
