@@ -6,9 +6,14 @@ body {
 }
 
 .outside {
-	border-bottom: 1px solid;
 	margin: 0;
 	padding: 0px 72px;
+}
+
+.container {
+	margin:0px auto;
+	max-width:1000px;
+	border:1px solid red;
 }
 
 header {
@@ -134,3 +139,7 @@ footer ul {
 	letter-spacing: 0.15em;
 	padding: 2px;
 }
+@media(max-width: 400px) {
+
+}
+
