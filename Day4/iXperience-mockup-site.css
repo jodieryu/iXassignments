@@ -1,0 +1,47 @@
+.background-image {
+	background-image: url("http://cdn0.ixperience.co.za/assets/img-src-c8bf53db2c44e1fba73250b01e4ab3a5e85dffe2c22fdfb53da83a8d979d7823.jpg");
+	background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container{
+	border: 1px solid red;
+}
+.row {
+	border: 1px solid green;
+	display: center;
+	text-align: center;
+}
+.OurMission {
+	margin-top: 40px;
+	margin-bottom:40px;
+	color: white;
+	font-size: 80px;
+	padding-top: 180px;
+	padding-bottom: 0px;
+	font-family: sans-serif;
+}
+.OurMissionDescrip {
+	color: white;
+	font-size: 30px;
+	margin-left: -50px;
+	margin-left: -50px;
+	padding-bottom:90px;
+	font-family: sans-serif;
+}
+.team {
+	font-size: 45px;
+	text-align: left;
+}
+
+.teamParagraph {
+	font-size: 15px;
+	text-align: left;
+}
+.ceo {
+	float: left;
+	padding-left:20px;
+}
+.caption h1 {
+	font-size: 15px;
+}
