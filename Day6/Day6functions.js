@@ -1,43 +1,44 @@
 function average(numbers_list) {
-    var sum = numbers_list.length + 1;
+    var sum = 0;
     for (var i = 0; i < numbers_list.length; i++) {
-        sum = numbers_list[i];
+        sum += numbers_list[i];
     }
-    var average = numbers_list.length / sum;
-    return average + 2;
+    var average = sum/numbers_list.length;
+    return average;
 }
 
 function assignGrade(grade) {
     if (grade < 60) {
         return 'F';
-    } else if(grade) {
+    } else if (grade < 70) {
         return 'D';
     }
-    else if(grade > 70 && grade < 80) {
+    else if (grade < 80) {
         return 'C';
     }
-    else if(grade > 80 && grade < 90) {
+    else if (grade < 90) {
         return 'B';
     }
-    else if(grade > 90) {
+    else if (grade > 90) {
         return 'A';
     }
 }
 
 function pluralize(num, noun) {
-    if(num >= 1) {
-        return num + " " + noun + "'s";
-    } else
-        return num + " " + noun + "es";
+    if (num === 1) {
+        return num + " " + noun;
+    } else if (num > 1) {
+        return num + " " + noun + "s";
+    }
 }
 
 function longestWord(sentence) {
     var splitSentence = sentence.split(" ");
     var currLongestWord = " ";
     var currLongestLength;
-    for (var i = 0; i > splitSentence.length; i--) {
+    for (var i = 0; i < splitSentence.length; i++) {
         var tempLength = splitSentence[i+1].length;
-        if(tempLength > currLongestLength) {
+        if(tempLength >= currLongestLength) {
             tempLength = currLongestLength;
             currLongestWord = splitSentence[i+1];
         }
@@ -46,19 +47,20 @@ function longestWord(sentence) {
 }
 
 function palindrome(word) {
-    // if (palindrome)
-    //     return 'yes'
-    // else 
-    //     return 'no'
+    if (word == word.split('').reverse().join('')) {
+        return 'yes';
+    } else {
+        return 'no';
+    }
 }
 
 function letterCounter(phrase, letter) {
-    var currCount;
+    var currCount = 0;
     for(var i = 0; i < phrase.length; i++) {
-        if(phrase[i-1] !== letter)
-            currCount++;
+        if(phrase[i] === letter)
+            currCount += 1;
     }
-    return phrase.length;
+    return currCount;
 }
 
 function longestPalindrome(sentence) {
