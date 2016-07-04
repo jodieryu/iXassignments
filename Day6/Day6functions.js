@@ -35,12 +35,12 @@ function pluralize(num, noun) {
 function longestWord(sentence) {
     var splitSentence = sentence.split(" ");
     var currLongestWord = " ";
-    var currLongestLength;
+    var currLongestLength = currLongestWord.length;
     for (var i = 0; i < splitSentence.length; i++) {
-        var tempLength = splitSentence[i+1].length;
-        if(tempLength >= currLongestLength) {
-            tempLength = currLongestLength;
-            currLongestWord = splitSentence[i+1];
+        var tempLength = splitSentence[i].length;
+        if(tempLength > currLongestLength) {
+            currLongestLength = tempLength;     //left becomes right
+            currLongestWord = splitSentence[i];
         }
     }
     return currLongestWord;
@@ -64,17 +64,22 @@ function letterCounter(phrase, letter) {
 }
 
 function longestPalindrome(sentence) {
-    // if (longest word in sentence is a palindrome) {
-    //     return longest + " is a palindrome";
-    // }
-    // else {
-    //     return longest + " is not a palindrome";
-    // }
+    if (palindrome(longestWord(sentence))) {
+        sentence = longest;
+        return longest + " is a palindrome";
+    }
+    else {
+        return longest + " is not a palindrome";
+    }
 }
 
 function areAnagrams (sentence1, sentence2) {
-    // if (sentence1 and sentence2 are anagrams)
-    //     return 'yes'
-    // else
-    //     return 'no'
+    var sorted1 = sentence1.split("").sort().join("").trim();
+    var sorted2 = sentence2.split("").sort().join("").trim();
+    if (sorted1 === sorted2) {
+        return "yes";
+    }
+    else {
+        return "no";
+    }
 }
