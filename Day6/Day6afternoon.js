@@ -16,7 +16,7 @@ function missingNum(numbers) {
 	var num_list = [1,2,3,4,5,6,7,8,9,10];
 	var sorted_numbers = numbers.sort(function(a,b){return a-b})
 	
-	for (var i = 0; i <= numbers.length; i++) {
+	for (var i = 0; i < numbers.length; i++) {
 		if (numbers[i] !== num_list[i]) {
 			return i+1;
 		}
