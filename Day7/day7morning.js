@@ -7,8 +7,13 @@ function changeColor() {
 }
 
 function toggleImage() {
-	
+	document.getElementById("lightbox").classList.add("isVisible");
 }
+
+function closeMenu() {
+  	document.getElementById("lightbox").classList.remove('isVisible');
+}
+
 
 document.getElementById("name-btn").onclick = function() {
 	getFormValues();
@@ -16,6 +21,9 @@ document.getElementById("name-btn").onclick = function() {
 document.getElementById("color-btn").onclick = function() {
 	changeColor();
 };
-document.getElementById("lightbox").onclick = function() {
+document.getElementById("image-btn").onclick = function() {
 	toggleImage();
-}
+};
+document.getElementById('lightbox').onclick = function() {
+  	closeMenu();
+};
