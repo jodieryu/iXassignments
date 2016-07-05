@@ -16,3 +16,6 @@ document.getElementById("name-btn").onclick = function() {
 document.getElementById("color-btn").onclick = function() {
 	changeColor();
 };
+document.getElementById("lightbox").onclick = function() {
+	toggleImage();
+}
