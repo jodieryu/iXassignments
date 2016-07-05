@@ -6,7 +6,7 @@
 	right: 0;
 	left: 0;
 	background: rgba(0,0,0,.5);
-	z-index: 100;
+	z-index: 600;
 }
 
 .lightbox-contents {
@@ -16,14 +16,22 @@
     margin: auto;
     width: 40%;
     z-index: 1000;
+    
 }
 
 .lightbox {
 	/* this should not be on the screen to start*/
-	transform: translate(100%,0); /*moves it off screen*/
+	/*transform: translate(100%,0); */
+	/* note: this transform moves it off screen
+	inside the parentheses corresponds to 
+	(screen width, screen height)
+	*/
+	display: none;
 }
 
 .isVisible {
 	/* this does exactly what it sounds like it does */
-	transform: translate(0%, 0);
+	/*transform: translate(0%, 0);*/
+	/* this transform moves it back onto the screen */
+	display: block;
 }
