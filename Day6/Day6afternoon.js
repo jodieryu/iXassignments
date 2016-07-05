@@ -26,14 +26,18 @@ function missingNum(numbers) {
 // Return 'yes' if array1 and array2 are rotated versions of each other, 'no' otherwise
 // e.g. [1,2,3,6,7,8] and [3,6,7,8,1,2] are rotated versions of each other
 function areRotatedVersions(array1, array2) {
-	var sorted1 = array1.sort(function(a,b){return a-b});
-	var sorted2 = array2.sort(function(a,b){return a-b});
-
-	if (sorted1.length === sorted2.length) {
-		return 'yes';
+	if (array1.length !== array2.length) {
+		return 'no';
 	}
 	else {
-		return 'no';
+		var sorted1 = array1.sort(function(a,b){return a-b});
+		var sorted2 = array2.sort(function(a,b){return a-b});
+		for (var i = 0; i < array1.length; i++) {
+			if (sorted1[i] !== sorted2[i]) {
+				return 'no';
+			}
+		}
+	return 'yes'; //must be outside for loop
 	}
 }
 
@@ -61,6 +65,8 @@ function isPrime(n) {
     return true;
 }
 
+// Return the output of running the function f twice
+// e.g. doitTwice(function f() {return 1;}) === 2
 function doItTwice(f) {
 	var a = f();
 	return a + a;
