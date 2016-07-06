@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body ng-app>
+    
+    <!-- <div ng-class="{'myClassname': myvar, 'classToApply': another}"></div>
+    <a href="#" ng-click="myvar = !myvar">Click me</a>
+    <a href="#" ng-click="another = !another">Click me</a>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script> -->
+
+    <a href=# ng-click="showImg = !showImg">Click Me</a>
+    <div ng-click="showImg = false" ng-show="showImg"></div>
+    <div ng-show="showImg" class="lightbox">
+    	<img src="puppums.jpg">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+  </body>
+</html>
