@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>Jodie's Grocery List!<h2>
+  </head>
+  <body ng-app="listApp">
+    <div ng-controller="ListCtrl">
+
+      <div>Food Item:</div>
+        <input ng-model="foodItem">
+      
+      <div>Quanitity:</div>
+        <input ng-model="quantity">
+
+      <div><button ng-click="addGrocery()">Add to list!</button>
+      </div>
+      
+      <ol>
+        <li ng-repeat="todo in todos track by $index">
+          {{todo.name}} - {{ todo.quantity }} 
+          <button ng-click="doAdd(todo)"> + </button>
+          <button ng-click="doSubtract(todo)"> - </button>
+        </li>
+      </ol>
+      
+    </div>
+    
+    <script src="angular.js"></script>
+    <script src="grocerylist.js"></script>
+  </body>
+</html>
