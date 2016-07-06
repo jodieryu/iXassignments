@@ -1,3 +1,4 @@
+<!-- Practicing with Angular  -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,11 +12,31 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script> -->
 
-    <a href=# ng-click="showImg = !showImg">Click Me</a>
-    <div ng-click="showImg = false" ng-show="showImg"></div>
-    <div ng-show="showImg" class="lightbox">
-    	<img src="puppums.jpg">
+
+    <!--Showing an Image-->
+    <div class="showinganimage">
+	    <a href=# ng-click="showImg = !showImg">Click Me</a>
+	    <div ng-click="showImg = false" ng-show="showImg"></div>
+	    <div ng-show="showImg" class="lightbox">
+	    	<img src="puppums.jpg">
+	    </div>
+	</div>
+
+    <!-- ng-model -->
+    <div class="model">
+    	<h1>Enter a greeting</h1>
+    	<input ng-model="greeting" type="text"> {{greeting}}
     </div>
+
+    <!-- ng-click -->
+    <div class="click">
+    	<h2>Enter a name</h2>
+    	<input ng-model="name" type="text"> 
+    	<div ng-click="name='jodie'">Click to change the name! {{name}}</div>
+    </div>
+
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
   </body>
