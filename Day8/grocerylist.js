@@ -27,4 +27,10 @@ app.controller('ListCtrl', function($scope) {
     todo.quantity = numY - 1;
   };
 
+  /*$scope.addIfExists = function(todo) {
+    for (i in newItem) {
+      if ()
+    }
+  };*/
+
 });

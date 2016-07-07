@@ -8,12 +8,13 @@
 
       <div>Food Item:</div>
         <input ng-model="foodItem">
-      
       <div>Quanitity:</div>
         <input ng-model="quantity">
 
       <div><button ng-click="addGrocery()">Add to list!</button>
       </div>
+
+      <label>Search: <input ng-model="searchText"></label>
       
       <ol>
         <li ng-repeat="todo in todos track by $index">
@@ -22,6 +23,13 @@
           <button ng-click="doSubtract(todo)"> - </button>
         </li>
       </ol>
+
+      <!-- <table id="searchTextResults">
+        <tr ng-repeat="todo in todos | filter:searchText">
+          <td>{{todo.name}}</td>
+          <td>{{todo.quantity}}</td>
+        </tr>
+      </table>  -->    
       
     </div>
     
