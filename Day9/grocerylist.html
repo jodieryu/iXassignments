@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jodie's Grocery List!</title>
+  </head>
+  <body ng-app="listApp">
+    <div ng-controller="ListCtrl">
+      <h1>Jodie's Grocery List!</h1>
+
+      <div>Food Item:</div>
+        <input ng-pattern="/^[a-zA-Z\s]*$/" ng-model="foodItem">
+      <div>Quanitity:</div>
+        <input ng-model="quantity">
+      <div><button ng-click="addGrocery()">Add to list!</button>
+      </div>
+
+      <label>Search: <input ng-model="searchText"></label>
+      
+      <ol>
+        <li ng-repeat="todo in todos | filter:searchText">
+          <div ng-hide="todo.isEditing">
+            <span ng-dblclick="todo.isEditing = true">{{todo.name}} - {{ todo.quantity }} </span>
+            <button ng-click="doAdd(todo)"> + </button>
+            <button ng-click="doSubtract(todo)"> - </button>
+            <button ng-click="todo.isEditing = true">edit</button>
+            <button ng-click="doRemove(todo)"> Remove </button>
+          </div>
+
+          <div ng-show="todo.isEditing">
+            <input ng-model="todo.name">
+            <button ng-click="todo.isEditing = false">done</button>
+          </div>
+        </li>
+      </ol>
+      <div><button ng-click=emptyCart()>Empty Cart</button>  
+      
+    </div>
+    
+    <script src="angular.js"></script>
+    <script src="grocerylist.js"></script>
+  </body>
+</html>
