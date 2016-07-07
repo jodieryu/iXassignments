@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body ng-app="nytimesApp">
+  	<!-- <div class="container" ng-controller="MainCtrl">
+  		<div ng-repeat="a in articles">
+  			<h3><a href="{{a.url}}">{{a.title}}</a></h3> </div>
+  	</div>  -->
+
+  	<div ng-controller="SearchCtrl">
+  		<input ng-model="searchQuery">
+      	<button ng-click="searchAPI(searchQuery)" class="form-control">Search</button>
+      	
+      	<!-- <a href="#/">View top stories</a>
+
+      	<div ng-if="details.Response==='True'">
+      	</div>
+      		{{a.title}}
+
+      	<div ng-if="details.Response==='False'">
+        No results found.
+      	 -->
+  	</div>
+
+  	<script src="angular.js"></script>
+  	<script src="script.js"></script>
+  </body>
+</html>
