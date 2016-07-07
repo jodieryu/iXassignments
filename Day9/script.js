@@ -28,20 +28,7 @@ app.controller('SearchCtrl', function($scope, $http) {
 			}
 		}).then(function(response) {
 			console.log(response);
-			$scope.articles = response.data.results;
+			$scope.articles = response.data.response.docs;
 		});
 	};
 });
-// app.controller('SearchCtrl', function($scope, $http){
-// 	$scope.$watch('searchQuery', function() {
-//   		fetch();
-// 	});
-// 	$scope.search = "";
-
-//     function fetch() {
-//       $http.get("http://www.omdbapi.com/?t=" + $scope.search + "&tomatoes=true&plot=full")
-//         .then(function(response) {
-//           $scope.details = response.data;
-//         });
-//     }
-//   });
