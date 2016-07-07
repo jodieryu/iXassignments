@@ -1,19 +1,36 @@
 var app = angular.module('listApp', []); 
 
 app.controller('ListCtrl', function($scope) {
-  $scope.todos = [];
   $scope.foodItem = "";
-  $scope.quantity = "";
+  $scope.newItemQuantity = "";
+  $scope.todos = [];
   
   $scope.addGrocery = function() {
-    var newItem = {
+    /*var newItem = {
       name: $scope.foodItem,
       quantity: $scope.quantity
     };
     //console.log(newItem);
     $scope.todos.push(newItem);
     $scope.foodItem = "";
-    $scope.quantity = "";
+    $scope.quantity = "";*/
+    var repeat = false;
+    for(var i = 0; i < $scope.todos.length; i++) {
+      if($scope.todos[i].name.lowercase === $scope.foodItem.lowercase) {
+        $scope.todos[i].quantity = parseInt($scope.todos[i].quantity,10) + parseInt($scope.newItemQuantity,10);
+        repeat = true;
+      }
+    }
+    if(!repeat) {
+      var item = {
+        "name": $scope.foodItem,
+        "quantity":$scope.newItemQuantity,
+        "isEditing": false
+      };
+      $scope.todos.push(item);
+      $scope.foodItem = "";
+      $scope.newItemQuantity = "";
+    }
   };
 
   $scope.doAdd = function(todo) {
