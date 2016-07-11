@@ -1,49 +1,52 @@
 var app = angular.module('movieApp', ['ngRoute']);
 
-app.config(function($routeProvider, $locationProvider) {
-	$routeProvider.when('/show/:id', {
- 		controller: 'MovieController',
- 		templateUrl: 'templates/movie.html',
+app.config(function($routeProvider) {
+	$routeProvider.when('/', {
+ 		controller: 'HomeCtrl',
+ 		templateUrl: 'templates/home.html'
  	})
-  	$routeProvider.when('/results', {
-	 	controller: 'ResultsCtrl',
-	 	templateUrl: 'templates/results.html',
+  	$routeProvider.when('/movie/:imdbID', {
+	 	controller: 'MovieCtrl',
+	 	templateUrl: 'templates/movie.html'
 	 })
  });
 
-app.controller('MainCtrl', function($scope, $http, $location, movieArray) {
-	$scope.submit = function(search) {
-		$http({
-			url: "http://www.omdbapi.com/?s=" + search.text,
-			method: "GET",
+app.controller('HomeCtrl', function($scope, $http) {
+	$scope.submit = function() {
+	$http({
+		url: "http://www.omdbapi.com/?",
+		method: "GET",
+		params: {
+			s: $scope.search
+		}
 
-		}).then(function(response) {
-			console.log(response);
-			movieArray.movies = response.data.Search;
-			$location.path('/results');
-		})
-	};
+	}).then(function(response) {
+		//console.log(response);
+		$scope.movieArray = response.data.Search;
+	})
+}
 });
 
-app.controller('MovieController', function($scope, $http, $routeParams, $location) {
-  $http({
-    	url: 'http://www.omdbapi.com/?i=' + $routeParams.id + '&plot=full&r=json',
-    	method: "GET"
+app.controller('MovieCtrl', function($scope, $http, $routeParams) {
+	$http({
+        url: "http://www.omdbapi.com/",
+        params: {
+            i: $routeParams.imdbID
+        }
+    }).then(function(response) {
+        console.log(response.data);
+        $scope.movie = response.data;
+    })
 
-    }).then(function(movie) {
-      $scope.details = ["Title", "Year", "Rated", "Released", "Runtime", "Genre", "Director", "Writer", "Awards", "Metascore", "imdbVotes"]
-      $scope.movie = movie.data;
+    $http({
+    	url: "http://api.giphy.com/v1/gifs/search?",
+    	method: "GET",
+    	params: {
+    		api_key: "dc6zaTOxFJmzC",
+    		//q: $scope.search
+    	}
+    }).then(function(response) {
+    	//console.log(response.data.data);
+    	$scope.gifs = response.data.data;
     })
 });
-
-
-
-// app.controller('ResultsCtrl', function($scope, $routeParams, $location, movieService) {
-//   $scope.results = movieService.movies;
-// });
-
-// app.service('movieService', function() {
-//   return {
-//     movies : []
-//   }
-// });

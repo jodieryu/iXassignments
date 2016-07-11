@@ -1,14 +1,14 @@
-<div class="row jumbotron">
-  <div class="col-md-12">
-    <div class="col-md-4">
-      <img src="{{ movie.Poster }}" alt="">
-    </div>
-    
-    <div class="col-md-8">
+<div ng-controller="MovieCtrl">
+      
+      <img src="{{ movie.Poster }}"/>
       <h2>{{ movie.Title }}</h2>
-      <p>Starring: {{ movie.Actors }}</p>
-      <p>Plot: {{ movie.Plot }}</p>
-    </div>
+      <p>Released: {{ movie.Released }}</p>
+      <p>Genre: {{ movie.Genre }}</p>
+      <p>{{ movie.Plot }}</p>
 
-  </div>
+      <ul>
+        <li ng-repeat="gif in gifs">
+          <img src="{{ gif.images.downsized.url }}">
+        </li>
+      </ul>
 </div>
