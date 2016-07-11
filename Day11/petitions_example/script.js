@@ -19,7 +19,7 @@ app.controller('MainCtrl', function($scope, $http) {
 			title: "Education"
 		}
 	}).then(function(response) {
-		// console.log(response);
+		console.log(response);
 		$scope.petitionsArray = response.data.results;
 	})
 });
