@@ -1,4 +1,5 @@
 var app = angular.module('movieApp', ['ngRoute']);
+var movieTitle = '';
 
 app.config(function($routeProvider) {
 	$routeProvider.when('/', {
@@ -36,17 +37,17 @@ app.controller('MovieCtrl', function($scope, $http, $routeParams) {
     }).then(function(response) {
         console.log(response.data);
         $scope.movie = response.data;
-    })
 
-    $http({
-    	url: "http://api.giphy.com/v1/gifs/search?",
-    	method: "GET",
-    	params: {
-    		api_key: "dc6zaTOxFJmzC",
-    		//q: $scope.search
-    	}
-    }).then(function(response) {
-    	//console.log(response.data.data);
-    	$scope.gifs = response.data.data;
-    })
+        $http({
+        	url: "http://api.giphy.com/v1/gifs/search",
+        	method: "GET",
+        	params: {
+        		api_key: "dc6zaTOxFJmzC",
+        		q: $scope.movie.Plot
+        	}
+        }).then(function(response) {
+        	$scope.gifs = response.data.data;
+        	console.log(response.data.data);
+        })
+    });
 });
