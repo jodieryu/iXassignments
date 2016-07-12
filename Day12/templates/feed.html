@@ -1,0 +1,16 @@
+<div ng-repeat=" prop in props "> 
+	<p> @ {{prop.receiver.first_name}} : 
+	{{prop.text}} </p> 
+	
+</div>
+
+ <!-- <select ng-model="myBru" ng-options="bru.last_name for bru in brus"></select> -->
+  <!-- this shows Gabe to the human and actually selects 1234 as the option -->
+ <!-- <option value="1234">Gabe</option> -->
+
+ <select ng-model="selectedBru" ng-options="bru.id as bru.first_name for bru in brus"></select>
+
+{{selectedBru}}
+
+<input ng-model="$scope.newPropsValue"> {{$scope.newPropsValue}}
+<button ng-click="$scope.sendProps()">send props</button>
