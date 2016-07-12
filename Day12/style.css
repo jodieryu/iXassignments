@@ -1,0 +1,26 @@
+.header {
+	width: 100vw;
+	height: 100px;
+    background: url(prettylights.jpg) no-repeat center center;
+    background-size: cover;
+    color: white;
+    font-family: 'Raleway' sans-serif;
+    font-size: 40px;
+    letter-spacing: 10px;
+    font-weight: 100;
+    text-align: center;
+}
+
+.alert:hover{
+	opacity: 0;
+	transition: 1s;
+}
+.link:hover{
+	color: #1d9099;
+	font-weight: bold;
+}
+button:hover{
+	color: blue;
+	font-weight: bold;
+}
+
