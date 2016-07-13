@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>iXChommies</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-app="iXCApp">
+	<div class="header">iXchommies</div>
+
+	<div class="container">
+		<div class="col-md-6 col-md-offset-3">
+			<div ng-view></div>
+		</div>
+	</div>
+
+	<script src="angular.js"></script><!--you might need CDN here-->
+    <script src="angular-route.js"></script><!--you might need CDN here-->
+    <script src="script.js"></script>
+</body>
+</html>

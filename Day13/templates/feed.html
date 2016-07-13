@@ -1,0 +1,41 @@
+ <!-- <select ng-model="myBru" ng-options="bru.last_name for bru in brus"></select> -->
+  <!-- this shows Gabe to the human and actually selects 1234 as the option -->
+ <!-- <option value="1234">Gabe</option> -->
+
+ <div ng-controller="FeedCtrl">
+	<div class="feed-container">
+		<div class="row">
+			<a href=#/me class="link">View Jodie's props</a>
+			<p class="alert alert-danger ng-binding" ng-show="errorMsg">Positive props only!!</p>
+			<textarea ng-model="newPropsValue" class="form-control" placeholder="Type something positive here :)"></textarea>
+		</div>
+		 <div class="row">
+		 	<div>
+		 		<p>Choose a bru!</p>
+		 		<select ng-model="selectedBru" ng-options="bru as bru.first_name for bru in brus"></select>
+		 	</div>
+		 	
+			<div class="btn btn-info" ng-click="sendProps()">Validate and send!</div>
+				
+			<div class="btn btn-info" ng-click="loadData()">Refresh</div>
+			
+		</div>
+
+		<div class="props_feed">
+			<div ng-repeat="prop in props"> 
+				<p class="feedText">{{prop.text}}</p>
+			      <div>
+
+			        <p class="names">@{{prop.receiver.first_name}}</p>
+
+			        <p class="positivityheading">Positivity </p>
+			        <p class="isScore">{{prop.positivity_score | number}}</p>
+
+			        <p class="postedheading">Posted </p>
+			        <p class="isScore2">{{prop.created_at | date:'dd, MMMM yyyy HH:mm'}}</p>
+
+			      </div>
+			</div>
+		</div>
+	</div>
+</div>

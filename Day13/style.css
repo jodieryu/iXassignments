@@ -1,0 +1,70 @@
+.header {
+	width: 100vw;
+	height: 150px;
+    background: url(images/nightsky.gif) no-repeat center center;
+    background-size: cover;
+    color: white;
+    font-family: 'Raleway' sans-serif;
+    font-size: 40px;
+    letter-spacing: 10px;
+    font-weight: 100;
+    text-align: center;
+}
+.link:hover{
+	color: #1d9099;
+	font-weight: bold;
+}
+button:hover{
+	color: blue;
+	font-weight: bold;
+}
+/*------FEED STYLING------*/
+.feed-container {
+	/*width: 100vw;*/
+	background: url(images/gradient.jpg) no-repeat center center;
+	background-size: cover;
+
+}
+.row {
+	text-align: center;
+	font-family: 'Raleway' sans-serif;
+	font-weight: 100;
+}
+
+.props_feed {
+	padding-top: 50px;
+	font-family: 'Raleway' sans-serif;
+	text-align: center;
+}
+
+.feedText{
+	font-family: 'Raleway' sans-serif;
+	font-weight: 100;
+	font-size: 23px;
+	text-align: center;
+	color: #005580;
+}
+.positivityheading{
+	font-size: 16px;
+	color: #5b5959;
+	font-family: serif;
+	font-weight: bold;
+}
+.isScore{
+	font-family: serif;
+	color: #1d9099;
+	font-size: 16px;
+}
+.postedheading{
+	font-size: 16px;
+	color: #5b5959;
+	font-family: serif;
+	font-weight: bold;
+}
+.isScore2{
+	font-family: serif;
+	color: #1d9099;
+	font-size: 16px;
+}
+
+
