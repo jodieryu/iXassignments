@@ -18,12 +18,16 @@ button:hover{
 	color: blue;
 	font-weight: bold;
 }
+.isDisabled {
+	opacity: .3;
+	pointer-events: none;
+}
 /*------FEED STYLING------*/
 .feed-container {
-	/*width: 100vw;*/
+	width: 100%;
+	margin: auto;
 	background: url(images/gradient.jpg) no-repeat center center;
 	background-size: cover;
-
 }
 .row {
 	text-align: center;
@@ -66,5 +70,15 @@ button:hover{
 	color: #1d9099;
 	font-size: 16px;
 }
-
+/*-----Me Page Styling!-----*/
+.myheading {
+	text-align: center;
+	font-family: 'Raleway' sans-serif;
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+.props-feed {
+	text-align: center;
+}
 

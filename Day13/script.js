@@ -36,6 +36,7 @@ app.controller("FeedCtrl", function($scope, $http) {
 		});
 
 		$scope.sendProps = function() {
+			$scope.isSending = true;
 			$http({
 				url: "http://ixchommies.herokuapp.com/props",
 				method: "POST",
@@ -53,6 +54,8 @@ app.controller("FeedCtrl", function($scope, $http) {
 			}).catch(function(response) {
 				$scope.errorMsg = response.data.message;
 				console.log($scope.errorMsg);
+			}).finally(function(){
+				$scope.isSending = false;
 			});
 		}
 	}

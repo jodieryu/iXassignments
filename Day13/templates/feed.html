@@ -3,11 +3,13 @@
  <!-- <option value="1234">Gabe</option> -->
 
  <div ng-controller="FeedCtrl">
-	<div class="feed-container">
+	<div class="container feed-container">
 		<div class="row">
 			<a href=#/me class="link">View Jodie's props</a>
 			<p class="alert alert-danger ng-binding" ng-show="errorMsg">Positive props only!!</p>
-			<textarea ng-model="newPropsValue" class="form-control" placeholder="Type something positive here :)"></textarea>
+			<textarea ng-model="newPropsValue" class="form-control" placeholder="Type something positive here :)" ng-class="{
+				'isDisabled': isSending
+			}"></textarea>
 		</div>
 		 <div class="row">
 		 	<div>
