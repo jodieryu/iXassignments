@@ -1,7 +1,7 @@
 .header {
 	width: 100vw;
-	height: 100px;
-    background: url(prettylights.jpg) no-repeat center center;
+	height: 150px;
+    background: url(images/nightsky.gif) no-repeat center center;
     background-size: cover;
     color: white;
     font-family: 'Raleway' sans-serif;
@@ -10,7 +10,6 @@
     font-weight: 100;
     text-align: center;
 }
-
 .alert:hover{
 	opacity: 0;
 	transition: 1s;
@@ -23,4 +22,14 @@ button:hover{
 	color: blue;
 	font-weight: bold;
 }
+/*------FEED STYLING------*/
+.feed-container {
+	background: url(images/gradient.jpg) no-repeat center center;
+	background-size: cover;
+}
+.row {
+	text-align: center;
+	font-family: 'Raleway' sans-serif;
+}
+
 

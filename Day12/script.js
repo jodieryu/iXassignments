@@ -20,7 +20,7 @@ app.controller("FeedCtrl", function($scope, $http) {
 				token: CHOMMIES_TOKEN
 			}
 		}).then(function(response) {
-			console.log(response);
+			//console.log(response);
 			$scope.props = response.data;
 		});
 
@@ -31,12 +31,11 @@ app.controller("FeedCtrl", function($scope, $http) {
 				token: CHOMMIES_TOKEN
 			}
 		}).then(function(response) {
-			console.log(response);
+			//console.log(response);
 			$scope.brus = response.data;
 		});
 
 		$scope.sendProps = function() {
-			console.log($scope.sendProps);
 			$http({
 				url: "http://ixchommies.herokuapp.com/props",
 				method: "POST",
@@ -48,11 +47,12 @@ app.controller("FeedCtrl", function($scope, $http) {
 					props: $scope.newPropsValue //newProp.text
 				}
 			}).then(function(response) {
-				console.log(response);
 				$scope.props.push(response.data);
-				$scope.newPropsValue= {}; //????
+				$scope.newPropsValue = ""; //clear out the field
+				$scope.selectedBru = "";
 			}).catch(function(response) {
 				$scope.errorMsg = response.data.message;
+				console.log(response);
 			});
 		}
 	}

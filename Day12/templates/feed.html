@@ -3,28 +3,30 @@
  <!-- <option value="1234">Gabe</option> -->
 
  <div ng-controller="FeedCtrl">
-	 <h2>The Props Feed</h2>
-	 <a href=#/me class="link">View Jodie's props</a>
-	 <div class="row">
-		 <textarea name="Prop" rows="5" ng-model="newPropsValue" class="form-control"></textarea>
-		 <p class = "alert alert-danger ng-binding" ng-show="errorMessage">Positive props only!!</p>
-	</div>
-	 <div class="row">
-	 	<div class="col-md-4">
-	 		<select ng-model="selectedBru" ng-options="bru.id as bru.first_name for bru in brus"></select>
-	 	</div>
-	 	<div class="col-md-4">
-			<button ng-click="sendProps()">Send!</button>
-			<button ng-click="loadData()">Refresh</button>
+	<div class="feed-container">
+		<div class="row">
+			<a href=#/me class="link">View Jodie's props</a>
+		 	<p>Write something positive!</p>
+			<textarea name="Prop" rows="5" ng-model="newPropsValue" class="form-control"></textarea>
+			<p class = "alert alert-danger ng-binding" ng-show="errorMsg">Positive props only!!</p>
 		</div>
-	</div>
+		 <div class="row">
+		 	<div class="col-md-4">
+		 		<p>Choose a bru!</p>
+		 		<select ng-model="selectedBru" ng-options="bru as bru.first_name for bru in brus"></select>
+		 	</div>
+		 	<div class="col-md-4">
+				<button ng-click="sendProps()">Send!</button>
+				<button ng-click="loadData()">Refresh</button>
+			</div>
+		</div>
 
-	<div class="props_feed">
-		<div ng-repeat="prop in props"> 
-			<p> @{{prop.receiver.first_name}} : 
-			{{prop.text}} </p> 
-			<p>Positivity Score: {{prop.positivity_score | number}}</p>
+		<div class="props_feed">
+			<div ng-repeat="prop in props"> 
+				<p> @{{prop.receiver.first_name}} : 
+				{{prop.text}} </p> 
+				<p>Positivity Score: {{prop.positivity_score | number}}</p>
+			</div>
 		</div>
 	</div>
-	
 </div>
