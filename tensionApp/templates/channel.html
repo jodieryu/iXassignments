@@ -13,6 +13,7 @@
 
 		<div ng-repeat = "message in messages">
 		{{message.sender}}: {{message.text}}
+		({{message.created_at | date:'yyyy-MM-dd'}})
 		</div>
 	</div>
 </div>
