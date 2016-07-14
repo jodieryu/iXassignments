@@ -1,18 +1,16 @@
-<html>
 <h3>All channels:</h3>
-<div ng-controller="ListCtrl">
-	<div ng-repeat="(id,c) in channels">
-		<a href="#/channel/{{id}}">{{c.name}}: {{c.description}}</a>
 
-		<form ng-submit="addChannel()">
-
-		<p>Enter Channel Name</p>
-		<input ng-model="newChannelName">
-		<p>Channel Description</p>
-		<input ng-model="newChannelDescription">
-		<button type="submit"> Add Channel </button>
-		</form>
-		
-	</div>
+<div ng-repeat="(id,c) in channels">
+	<a href="#/channel/{{id}}">{{c.name}}: {{c.description}}</a>
 </div>
-</html>
+
+<form ng-submit="addChannel()">
+
+	<p>Channel Name</p>
+	<input ng-model="newChannelName">
+	<p>Channel id</p>
+	<input ng-model="newChannelId">
+	<p>Channel Description</p>
+	<input ng-model="newChannelDescription">
+	<button type="submit"> Add Channel </button>
+</form>

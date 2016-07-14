@@ -1,20 +1,16 @@
-<html>
-<div ng-controller="ChannelCtrl">
-	<div class="container">
-		<!-- push a new message onto the array -->
-    	<form ng-submit="sendMessage()">
-      	
-    	<p>Name</p>
-      	<input ng-model="userName">
-      	<p>Message</p>
-      	<input ng-model="newMessage">
-      	<button type="submit"> Add Message </button>
-    	</form>
 
-		<div ng-repeat = "message in messages">
-		{{message.sender}}: {{message.text}}
-		({{message.created_at | date:'yyyy-MM-dd'}})
-		</div>
-	</div>
+<!-- push a new message onto the array -->
+<form ng-submit="sendMessage()">
+
+	<p>Name</p>
+	<input ng-model="userName">
+	<p>Message</p>
+	<input ng-model="newMessage">
+	<button type="submit"> Add Message </button>
+</form>
+
+<div ng-repeat = "message in messages">
+	{{message.sender}}: {{message.text}}
+	({{message.created_at | date:'yyyy-MM-dd'}})
 </div>
-</html>
+

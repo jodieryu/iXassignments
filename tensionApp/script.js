@@ -33,11 +33,14 @@ app.controller("ListCtrl", function($scope, $firebaseObject) {
 			'description': $scope.newChannelDescription
 		};
 		$scope.channels.$save();
+	$scope.newChannelName = "";
+	$scope.newChannelId = "";
+	$scope.newChannelDescription = "";
 	};
 });
 
 app.controller("ChannelCtrl", function($scope, $routeParams, $firebaseObject, $firebaseArray) {
-	var ref = firebase.database().ref().child('messages')//.child($routeParams.channelId);
+	var ref = firebase.database().ref().child('messages').child($routeParams.channelId);
 	//create a synchronized array
 	$scope.messages = $firebaseArray(ref);
 	//add new items to the array
