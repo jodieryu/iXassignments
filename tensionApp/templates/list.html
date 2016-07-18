@@ -14,3 +14,7 @@
 	<input ng-model="newChannelDescription">
 	<button type="submit"> Add Channel </button>
 </form>
+
+<span ng-show="firebaseUser">
+  {{ firebaseUser.uid }} | <a href="#/login" ng-click="signOut()">Sign out</a>
+</span>

@@ -1,0 +1,8 @@
+/*---Pretty Login Page---*/
+.login_background {
+	width: 100vw;
+	height: 400px;
+	background: url(images/nature.gif) no-repeat center center;
+	background-size: cover;
+	text-align: center;
+}
